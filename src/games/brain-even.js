@@ -1,10 +1,10 @@
 import randomNumber from '../utils/randomNumber.js';
-
-const isEven = (num) => num % 2 === 0;
+import isEven from '../utils/math/isEven.js';
 
 const brainEven = () => {
   const num = randomNumber(1, 100);
   const answer = isEven(num) ? 'yes' : 'no';
+
   return [num, answer];
 };
 

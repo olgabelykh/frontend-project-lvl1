@@ -1,16 +1,5 @@
 import randomNumber from '../utils/randomNumber.js';
-
-const operations = ['*', '+', '-'];
-
-const multiply = (num1, num2) => num1 * num2;
-const addition = (num1, num2) => num1 + num2;
-const subtraction = (num1, num2) => num1 - num2;
-
-const calcMapping = {
-  '*': multiply,
-  '+': addition,
-  '-': subtraction,
-};
+import calc, { operations } from '../utils/math/calc.js';
 
 const brainCalc = () => {
   const operation = operations[randomNumber(0, 2)];
@@ -18,7 +7,7 @@ const brainCalc = () => {
   const num2 = randomNumber(0, 10);
 
   const question = `${num1} ${operation} ${num2}`;
-  const answer = String(calcMapping[operation](num1, num2));
+  const answer = String(calc(num1, num2, operation));
 
   return [question, answer];
 };

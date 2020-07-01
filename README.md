@@ -15,3 +15,8 @@
 
 <a href="https://asciinema.org/a/j5qPHGbg5C46LMVkJvPgDsvgL" target="_blank"><img src="https://asciinema.org/a/j5qPHGbg5C46LMVkJvPgDsvgL.svg" /></a>
 <a href="https://asciinema.org/a/344399" target="_blank"><img src="https://asciinema.org/a/344399.svg" /></a>
+
+## brain-gcd
+
+<a href="https://asciinema.org/a/344481" target="_blank"><img src="https://asciinema.org/a/344481.svg" /></a>
+<a href="https://asciinema.org/a/344483" target="_blank"><img src="https://asciinema.org/a/344483.svg" /></a>
