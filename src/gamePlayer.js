@@ -1,7 +1,9 @@
 import readlineSync from 'readline-sync';
 
+const DEFAULT_QUESTION_CNT = 3;
+
 const createPlay = (game) => {
-  const play = function play(questionCnt = 3) {
+  const play = (questionCnt = DEFAULT_QUESTION_CNT) => {
     if (questionCnt === 0) {
       return true;
     }

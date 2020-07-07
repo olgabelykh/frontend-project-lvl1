@@ -1,31 +1,27 @@
 # frontend-project-lvl1
 
-<a href="https://codeclimate.com/github/codeclimate/codeclimate/maintainability">
-<img src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability" />
-</a>
-<a href="https://github.com/olgabelykh/frontend-project-lvl1/actions">
-<img src="https://github.com/olgabelykh/frontend-project-lvl1/workflows/Node.js%20CI/badge.svg" />
-</a>
+[![Maintainability](https://api.codeclimate.com/v1/badges/018cc8fe2230f13295d9/maintainability)](https://codeclimate.com/github/olgabelykh/frontend-project-lvl1/maintainability)
+[![Gitactions](https://github.com/olgabelykh/frontend-project-lvl1/workflows/Node.js%20CI/badge.svg)](https://github.com/olgabelykh/frontend-project-lvl1/actions)
 
 ## brain-even
 
-<a href="https://asciinema.org/a/1nwq3SFgR4Xqm08u7AXUDsqjR" target="_blank"><img src="https://asciinema.org/a/1nwq3SFgR4Xqm08u7AXUDsqjR.svg" /></a>
+[![asciicast](https://asciinema.org/a/344356.svg)](https://asciinema.org/a/344356)
 
 ## brain-calc
 
-<a href="https://asciinema.org/a/j5qPHGbg5C46LMVkJvPgDsvgL" target="_blank"><img src="https://asciinema.org/a/j5qPHGbg5C46LMVkJvPgDsvgL.svg" /></a>
-<a href="https://asciinema.org/a/344399" target="_blank"><img src="https://asciinema.org/a/344399.svg" /></a>
+[![asciicast](https://asciinema.org/a/344398.svg)](https://asciinema.org/a/344398)
+[![asciicast](https://asciinema.org/a/344399.svg)](https://asciinema.org/a/344399)
 
 ## brain-gcd
 
-<a href="https://asciinema.org/a/344481" target="_blank"><img src="https://asciinema.org/a/344481.svg" /></a>
-<a href="https://asciinema.org/a/344483" target="_blank"><img src="https://asciinema.org/a/344483.svg" /></a>
+[![asciicast](https://asciinema.org/a/344483.svg)](https://asciinema.org/a/344483)
+[![asciicast](https://asciinema.org/a/344481.svg)](https://asciinema.org/a/344481)
 
 ## brain-progression
 
-<a href="https://asciinema.org/a/344507" target="_blank"><img src="https://asciinema.org/a/344507.svg" /></a>
+[![asciicast](https://asciinema.org/a/344507.svg)](https://asciinema.org/a/344507)
 
 ## brain-prime
 
-<a href="https://asciinema.org/a/344520" target="_blank"><img src="https://asciinema.org/a/344520.svg" /></a>
-<a href="https://asciinema.org/a/344522" target="_blank"><img src="https://asciinema.org/a/344522.svg" /></a>
+[![asciicast](https://asciinema.org/a/344522.svg)](https://asciinema.org/a/344522)
+[![asciicast](https://asciinema.org/a/344520.svg)](https://asciinema.org/a/344520)

@@ -1,26 +1,22 @@
 import randomNumber from '../utils/randomNumber.js';
-import primes from '../utils/math/primes.js';
-import isPrime from '../utils/math/isPrime.js';
 
-const randomPrime = () => {
-  const position = randomNumber(0, primes.length - 1);
-  return primes[position];
-};
+const NUMBER_MIN = 1;
+const NUMBER_MAX = 5000;
 
-const randomNum = () => {
-  const min = primes[0];
-  const max = primes[primes.length - 1];
-  return randomNumber(min, max);
-};
+const isPrime = (num, divisor = num - 1) => {
+  if (divisor === 1) {
+    return true;
+  }
 
-const choiceMapping = {
-  1: randomPrime,
-  2: randomNum,
+  if (num % divisor === 0) {
+    return false;
+  }
+
+  return isPrime(num, divisor - 1);
 };
 
 const brainPrime = () => {
-  const choice = randomNumber(1, 2);
-  const num = choiceMapping[choice]();
+  const num = randomNumber(NUMBER_MIN, NUMBER_MAX);
   const answer = isPrime(num) ? 'yes' : 'no';
 
   return [num, answer];

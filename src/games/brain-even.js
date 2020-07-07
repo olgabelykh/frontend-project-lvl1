@@ -1,8 +1,12 @@
 import randomNumber from '../utils/randomNumber.js';
-import isEven from '../utils/math/isEven.js';
+
+const NUMBER_MIN = 1;
+const NUMBER_MAX = 100;
+
+const isEven = (num) => num % 2 === 0;
 
 const brainEven = () => {
-  const num = randomNumber(1, 100);
+  const num = randomNumber(NUMBER_MIN, NUMBER_MAX);
   const answer = isEven(num) ? 'yes' : 'no';
 
   return [num, answer];
