@@ -1,37 +1,30 @@
 import randomNumber from '../utils/randomNumber.js';
 
+export const ANNOUNCEMENT = 'What is the result of the expression?';
 const NUMBER_MIN = 1;
 const NUMBER_MAX = 100;
 
-const multiply = (num1, num2) => num1 * num2;
-const addition = (num1, num2) => num1 + num2;
-const subtraction = (num1, num2) => num1 - num2;
-
-const operations = [
-  ['*', multiply],
-  ['+', addition],
-  ['-', subtraction],
-];
-
-const randomOperation = () => {
-  const operationIndexMin = 0;
-  const operationIndexMax = operations.length - 1;
-
-  const operationIndex = randomNumber(operationIndexMin, operationIndexMax);
-  return operations[operationIndex];
+const operations = {
+  '*': (a, b) => a * b,
+  '+': (a, b) => a + b,
+  '-': (a, b) => a - b,
 };
 
 const brainCalc = () => {
-  const [operator, calc] = randomOperation();
-  const num1 = randomNumber(NUMBER_MIN, NUMBER_MAX);
-  const num2 = randomNumber(NUMBER_MIN, NUMBER_MAX);
+  const availableOperators = Object.keys(operations);
+  const operatorIndexMin = 0;
+  const operatorIndexMax = availableOperators.length - 1;
+  const operatorIndex = randomNumber(operatorIndexMin, operatorIndexMax);
+  const operator = availableOperators[operatorIndex];
+  const calc = operations[operator];
 
-  const question = `${num1} ${operator} ${num2}`;
-  const answer = String(calc(num1, num2));
+  const a = randomNumber(NUMBER_MIN, NUMBER_MAX);
+  const b = randomNumber(NUMBER_MIN, NUMBER_MAX);
+
+  const question = `${a} ${operator} ${b}`;
+  const answer = String(calc(a, b));
 
   return [question, answer];
 };
-
-brainCalc.announcement = 'What is the result of the expression?';
 
 export default brainCalc;

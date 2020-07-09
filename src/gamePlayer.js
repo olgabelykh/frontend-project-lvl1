@@ -1,10 +1,10 @@
 import readlineSync from 'readline-sync';
 
-const DEFAULT_QUESTION_CNT = 3;
+const DEFAULT_QUESTIONS_COUNT = 3;
 
 const createPlay = (game) => {
-  const play = (questionCnt = DEFAULT_QUESTION_CNT) => {
-    if (questionCnt === 0) {
+  const play = (questionsCount = DEFAULT_QUESTIONS_COUNT) => {
+    if (questionsCount === 0) {
       return true;
     }
 
@@ -18,18 +18,18 @@ const createPlay = (game) => {
     }
 
     console.log('Correct!');
-    return play(questionCnt - 1);
+    return play(questionsCount - 1);
   };
 
   return play;
 };
 
-const gamePlayer = (game) => {
+const gamePlayer = (game, announcement) => {
   console.log('Welcome to the Brain Games!');
   const name = readlineSync.question('May I have your name? ').trim();
   console.log(`Hello, ${name}!`);
 
-  console.log(game.announcement);
+  console.log(announcement);
 
   const play = createPlay(game);
   const isWinner = play();

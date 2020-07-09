@@ -1,27 +1,35 @@
 import randomNumber from '../utils/randomNumber.js';
 
+export const ANNOUNCEMENT = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 const NUMBER_MIN = 1;
 const NUMBER_MAX = 5000;
 
-const isPrime = (num, divisor = num - 1) => {
-  if (divisor === 1) {
-    return true;
-  }
-
-  if (num % divisor === 0) {
+const isPrime = (a) => {
+  if (a < 2 || a % 2 === 0) {
     return false;
   }
 
-  return isPrime(num, divisor - 1);
+  if (a === 2) {
+    return true;
+  }
+
+  const max = Math.floor(Math.sqrt(a));
+  for (let divisor = 3; divisor <= max; divisor += 1) {
+    if (a % divisor === 0) {
+      return false;
+    }
+  }
+
+  return true;
 };
 
 const brainPrime = () => {
-  const num = randomNumber(NUMBER_MIN, NUMBER_MAX);
-  const answer = isPrime(num) ? 'yes' : 'no';
+  const a = randomNumber(NUMBER_MIN, NUMBER_MAX);
 
-  return [num, answer];
+  const question = a;
+  const answer = isPrime(a) ? 'yes' : 'no';
+
+  return [question, answer];
 };
-
-brainPrime.announcement = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 export default brainPrime;
