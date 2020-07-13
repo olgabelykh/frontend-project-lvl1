@@ -5,16 +5,12 @@ const NUMBER_MIN = 1;
 const NUMBER_MAX = 5000;
 
 const isPrime = (a) => {
-  if (a < 2 || a % 2 === 0) {
+  if (a === 1) {
     return false;
   }
 
-  if (a === 2) {
-    return true;
-  }
-
-  const max = Math.floor(Math.sqrt(a));
-  for (let divisor = 3; divisor <= max; divisor += 1) {
+  const divisorMax = Math.floor(Math.sqrt(a));
+  for (let divisor = 2; divisor <= divisorMax; divisor += 1) {
     if (a % divisor === 0) {
       return false;
     }
