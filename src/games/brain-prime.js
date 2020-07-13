@@ -1,4 +1,4 @@
-import randomNumber from '../utils/randomNumber.js';
+import generateRandomNumber from '../utils/generateRandomNumber.js';
 
 export const ANNOUNCEMENT = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 const NUMBER_MIN = 1;
@@ -24,7 +24,7 @@ const isPrime = (a) => {
 };
 
 const brainPrime = () => {
-  const a = randomNumber(NUMBER_MIN, NUMBER_MAX);
+  const a = generateRandomNumber(NUMBER_MIN, NUMBER_MAX);
 
   const question = a;
   const answer = isPrime(a) ? 'yes' : 'no';

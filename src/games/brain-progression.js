@@ -1,4 +1,4 @@
-import randomNumber from '../utils/randomNumber.js';
+import generateRandomNumber from '../utils/generateRandomNumber.js';
 
 export const ANNOUNCEMENT = 'What number is missing in the progression?';
 const PROGRESSION_SIZE = 10;
@@ -19,13 +19,14 @@ const generateArithmeticProgression = (initialTerm, termsCount, difference) => {
 };
 
 const brainProgession = () => {
-  const initialTerm = randomNumber(PROGRESSION_INITIAL_TERM_MIN, PROGRESSION_INITIAL_TERM_MAX);
-  const difference = randomNumber(PROGRESSION_DIFFERENCE_MIN, PROGRESSION_DIFFERENCE_MAX);
+  const initialTerm = generateRandomNumber(
+    PROGRESSION_INITIAL_TERM_MIN,
+    PROGRESSION_INITIAL_TERM_MAX,
+  );
+  const difference = generateRandomNumber(PROGRESSION_DIFFERENCE_MIN, PROGRESSION_DIFFERENCE_MAX);
   const progression = generateArithmeticProgression(initialTerm, PROGRESSION_SIZE, difference);
 
-  const positionToMaskMin = 0;
-  const positionToMaskMax = PROGRESSION_SIZE - 1;
-  const positionToMask = randomNumber(positionToMaskMin, positionToMaskMax);
+  const positionToMask = generateRandomNumber(0, progression.length - 1);
 
   const answer = String(progression[positionToMask]);
   progression[positionToMask] = POSITION_MASK;

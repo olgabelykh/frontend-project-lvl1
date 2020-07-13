@@ -1,4 +1,4 @@
-import randomNumber from '../utils/randomNumber.js';
+import generateRandomNumber from '../utils/generateRandomNumber.js';
 
 export const ANNOUNCEMENT = 'Find the greatest common divisor of given numbers.';
 const NUMBER_MIN = 1;
@@ -13,8 +13,8 @@ const gcd = (a, b) => {
 };
 
 const brainGcd = () => {
-  const a = randomNumber(NUMBER_MIN, NUMBER_MAX);
-  const b = randomNumber(NUMBER_MIN, NUMBER_MAX);
+  const a = generateRandomNumber(NUMBER_MIN, NUMBER_MAX);
+  const b = generateRandomNumber(NUMBER_MIN, NUMBER_MAX);
 
   const question = `${a} ${b}`;
   const answer = String(gcd(a, b));
