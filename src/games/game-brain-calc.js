@@ -10,7 +10,7 @@ const operations = {
   '-': (a, b) => a - b,
 };
 
-const brainCalc = () => {
+const gameBrainCalc = () => {
   const availableOperators = Object.keys(operations);
   const operatorIndex = generateRandomNumber(0, availableOperators.length - 1);
   const operator = availableOperators[operatorIndex];
@@ -22,7 +22,7 @@ const brainCalc = () => {
   const question = `${a} ${operator} ${b}`;
   const answer = String(calc(a, b));
 
-  return [question, answer];
+  return { question, answer };
 };
 
-export default brainCalc;
+export default gameBrainCalc;

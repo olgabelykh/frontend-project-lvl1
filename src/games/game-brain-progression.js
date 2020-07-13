@@ -7,8 +7,6 @@ const PROGRESSION_INITIAL_TERM_MAX = 10;
 const PROGRESSION_DIFFERENCE_MIN = 1;
 const PROGRESSION_DIFFERENCE_MAX = 3;
 
-const POSITION_MASK = '..';
-
 const generateArithmeticProgression = (initialTerm, termsCount, difference) => {
   const res = [];
   for (let i = 0; i < termsCount; i += 1) {
@@ -18,7 +16,7 @@ const generateArithmeticProgression = (initialTerm, termsCount, difference) => {
   return res;
 };
 
-const brainProgession = () => {
+const gameBrainProgession = () => {
   const initialTerm = generateRandomNumber(
     PROGRESSION_INITIAL_TERM_MIN,
     PROGRESSION_INITIAL_TERM_MAX,
@@ -29,10 +27,10 @@ const brainProgession = () => {
   const positionToMask = generateRandomNumber(0, progression.length - 1);
 
   const answer = String(progression[positionToMask]);
-  progression[positionToMask] = POSITION_MASK;
-  const question = progression.reduce((str, num) => `${str} ${num}`, '');
+  progression[positionToMask] = '..';
+  const question = progression.join(' ');
 
-  return [question, answer];
+  return { question, answer };
 };
 
-export default brainProgession;
+export default gameBrainProgession;

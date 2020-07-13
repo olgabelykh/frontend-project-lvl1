@@ -5,7 +5,7 @@ const NUMBER_MIN = 1;
 const NUMBER_MAX = 5000;
 
 const isPrime = (a) => {
-  if (a === 1) {
+  if (a <= 1) {
     return false;
   }
 
@@ -19,13 +19,12 @@ const isPrime = (a) => {
   return true;
 };
 
-const brainPrime = () => {
+const gameBrainPrime = () => {
   const a = generateRandomNumber(NUMBER_MIN, NUMBER_MAX);
 
-  const question = a;
   const answer = isPrime(a) ? 'yes' : 'no';
 
-  return [question, answer];
+  return { question: a, answer };
 };
 
-export default brainPrime;
+export default gameBrainPrime;

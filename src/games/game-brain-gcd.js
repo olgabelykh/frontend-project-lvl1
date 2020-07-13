@@ -12,14 +12,14 @@ const gcd = (a, b) => {
   return gcd(b, a % b);
 };
 
-const brainGcd = () => {
+const gameBrainGcd = () => {
   const a = generateRandomNumber(NUMBER_MIN, NUMBER_MAX);
   const b = generateRandomNumber(NUMBER_MIN, NUMBER_MAX);
 
   const question = `${a} ${b}`;
   const answer = String(gcd(a, b));
 
-  return [question, answer];
+  return { question, answer };
 };
 
-export default brainGcd;
+export default gameBrainGcd;

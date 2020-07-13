@@ -6,13 +6,12 @@ const NUMBER_MAX = 100;
 
 const isEven = (a) => a % 2 === 0;
 
-const brainEven = () => {
+const gameBrainEven = () => {
   const a = generateRandomNumber(NUMBER_MIN, NUMBER_MAX);
 
-  const question = a;
   const answer = isEven(a) ? 'yes' : 'no';
 
-  return [question, answer];
+  return { question: a, answer };
 };
 
-export default brainEven;
+export default gameBrainEven;
