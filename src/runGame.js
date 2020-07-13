@@ -24,7 +24,7 @@ const createPlay = (game) => {
   return play;
 };
 
-const gamePlayer = (game, announcement) => {
+const runGame = (game, announcement) => {
   console.log('Welcome to the Brain Games!');
   const name = readlineSync.question('May I have your name? ').trim();
   console.log(`Hello, ${name}!`);
@@ -40,4 +40,4 @@ const gamePlayer = (game, announcement) => {
   }
 };
 
-export default gamePlayer;
+export default runGame;
