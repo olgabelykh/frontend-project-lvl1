@@ -1,4 +1,4 @@
-import generateRandomNumber from '../utils/generateRandomNumber.js';
+import getRandomNumber from '../utils/getRandomNumber.js';
 
 export const ANNOUNCEMENT = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 const NUMBER_MIN = 1;
@@ -19,12 +19,10 @@ const isPrime = (a) => {
   return true;
 };
 
-const gameBrainPrime = () => {
-  const a = generateRandomNumber(NUMBER_MIN, NUMBER_MAX);
+export default () => {
+  const number = getRandomNumber(NUMBER_MIN, NUMBER_MAX);
 
-  const answer = isPrime(a) ? 'yes' : 'no';
+  const answer = isPrime(number) ? 'yes' : 'no';
 
-  return { question: a, answer };
+  return { question: String(number), answer };
 };
-
-export default gameBrainPrime;
