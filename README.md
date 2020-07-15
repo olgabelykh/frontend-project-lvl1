@@ -7,10 +7,10 @@
 
 A training project - console application, consisting of five games:
 
-1. brain-calc - calculate expression
-1. brain-even - guess if a number is even
+1. brain-calc - calculate the expression
+1. brain-even - guess if the number is even
 1. brain-gcd - find the greates common divisor of two numbers
-1. brain-prime - guess if a number is prime
+1. brain-prime - guess if the number is prime
 1. brain-progression - guess missing number
 
 ## Examples
