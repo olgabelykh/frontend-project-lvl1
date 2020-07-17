@@ -1,4 +1,5 @@
 import getRandomNumber from '../utils/getRandomNumber.js';
+import createGame from '../createGame.js';
 
 export const ANNOUNCEMENT = 'Find the greatest common divisor of given numbers.';
 const NUMBER_MIN = 1;
@@ -12,7 +13,7 @@ const calculateGcd = (a, b) => {
   return calculateGcd(b, a % b);
 };
 
-export default () => {
+const createRound = () => {
   const number1 = getRandomNumber(NUMBER_MIN, NUMBER_MAX);
   const number2 = getRandomNumber(NUMBER_MIN, NUMBER_MAX);
 
@@ -21,3 +22,5 @@ export default () => {
 
   return { question, answer };
 };
+
+export default createGame(createRound, ANNOUNCEMENT);

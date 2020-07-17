@@ -1,4 +1,5 @@
 import getRandomNumber from '../utils/getRandomNumber.js';
+import createGame from '../createGame.js';
 
 export const ANNOUNCEMENT = 'What is the result of the expression?';
 const NUMBER_MIN = 1;
@@ -10,8 +11,9 @@ const operations = {
   '-': (a, b) => a - b,
 };
 
-export default () => {
-  const availableOperators = Object.keys(operations);
+const availableOperators = Object.keys(operations);
+
+const createRound = () => {
   const operatorIndex = getRandomNumber(0, availableOperators.length - 1);
   const operator = availableOperators[operatorIndex];
   const calc = operations[operator];
@@ -24,3 +26,5 @@ export default () => {
 
   return { question, answer };
 };
+
+export default createGame(createRound, ANNOUNCEMENT);
